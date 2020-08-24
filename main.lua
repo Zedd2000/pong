@@ -371,23 +371,23 @@ function love.draw()
     love.graphics.printf("WINNER!!!", 0, VIRTUAL_HEIGHT / 2 + 25, VIRTUAL_WIDTH, 'center')
   end
 
-  displayFPS()
+  --displayFPS()
 
   push:apply('end')
 
 end
 
-function displayFPS()
-  love.graphics.setColor(0, 1, 0, 1)
-  love.graphics.setFont(smallFont)
-  love.graphics.print("FPS: " .. tostring(love.timer.getFPS()), 40, 20)
-  love.graphics.setColor(1, 1, 1, 1)
-  love.graphics.setFont(smallFont)
-  love.graphics.print("paddle2 y: " .. tostring(paddleTwo.y), 40, 30)
-  love.graphics.setColor(1, 1, 1, 1)
-  love.graphics.setFont(smallFont)
-  love.graphics.print(" nextY: " .. tostring(nextY), 40, 40)
-  love.graphics.setColor(1, 1, 1, 1)
-  love.graphics.setFont(smallFont)
+--function displayFPS()
+  --love.graphics.setColor(0, 1, 0, 1)
+  --love.graphics.setFont(smallFont)
+  --love.graphics.print("FPS: " .. tostring(love.timer.getFPS()), 40, 20)
+  --love.graphics.setColor(1, 1, 1, 1)
+  --love.graphics.setFont(smallFont)
+  --love.graphics.print("paddle2 y: " .. tostring(paddleTwo.y), 40, 30)
+  --love.graphics.setColor(1, 1, 1, 1)
+  --love.graphics.setFont(smallFont)
+  --love.graphics.print(" nextY: " .. tostring(nextY), 40, 40)
+  --love.graphics.setColor(1, 1, 1, 1)
+  --love.graphics.setFont(smallFont)
 
-end
+--end
