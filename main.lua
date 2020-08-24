@@ -51,9 +51,6 @@ function love.load()
   paddleOne = Paddle(5, 20, 5, 20)
   paddleTwo = Paddle(VIRTUAL_WIDTH - 10, VIRTUAL_HEIGHT - 30, 5, 20)
 
-
-  randomCompStart = math.random(0, VIRTUAL_HEIGHT - paddleTwo.height)
-
   gameState = 'playerCount'
 
 end
