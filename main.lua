@@ -287,6 +287,9 @@ function love.keypressed(key)
     elseif gameState == 'score' and servingPlayer == 1 then
       gameState = 'play'
       ball:serve(dt)
+    elseif gameState == 'score' and numOfPlayers == 2 and servingPlayer == 2 then
+	gameState = 'play'
+	ball:serve(dt)
     elseif gameState == 'victory' then
       love.load()
     end
@@ -296,6 +299,7 @@ function love.keypressed(key)
       gameState = 'setDifficult'
     elseif key == '2' then
       numOfPlayers = 2
+      ball = Ball(VIRTUAL_WIDTH / 2 - 2, VIRTUAL_HEIGHT / 2 - 2, 4, 4)
       gameState = 'start'
     end
   elseif gameState == 'setDifficult' then
@@ -321,11 +325,11 @@ function love.draw()
 
   if gameState == 'start' or gameState == 'play' or gameState == 'score' then
     ball:render()
-    love.graphics.print(" ballY: " .. tostring(ball.y), 40, 50)
-    love.graphics.setColor(1, 1, 1, 1)
-    love.graphics.setFont(smallFont)
-    love.graphics.print(" ballDY: " .. tostring(ball.dy), 40, 60)
-    love.graphics.setColor(1, 1, 1, 1)
+    --love.graphics.print(" ballY: " .. tostring(ball.y), 40, 50)
+    --love.graphics.setColor(1, 1, 1, 1)
+    --love.graphics.setFont(smallFont)
+    --love.graphics.print(" ballDY: " .. tostring(ball.dy), 40, 60)
+    --love.graphics.setColor(1, 1, 1, 1)
   end
 
   love.graphics.setFont(smallFont)
